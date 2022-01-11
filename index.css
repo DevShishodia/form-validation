@@ -4,18 +4,21 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #d8caca;
 }
 h2{
-    margin-bottom: 40px;
+    margin: 0px;
+    margin-bottom: 30px;
     text-align: center;
+    font-family: 'Patua One', cursive;
+    font-size: 3em;
+    color: rgb(6, 8, 6);
 }
 .form_container{
     position: fixed;
-    top: 90px;
+    top: 30px;
     width: 380px;
-    height: 420px;
-    background-color: #ffffff;
+    height: 530px;
+    background: linear-gradient(180deg,#d3d4d8,#080808);
     border-radius: 20px;
     display: flex;
     flex-direction: column;
@@ -23,18 +26,46 @@ h2{
     align-items: center;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
-form > input{
+ input{
+     outline: none;
     width: 300px;
     margin: 0.3rem;
     padding: 0.5rem;
+    border: 2px solid rgb(199, 195, 195);
+    border-radius: 5px;
 }
-form > button{
+input:hover{
+    border: 2px solid #0861e7;
+    background-color: rgb(202, 199, 199);
+}
+.input_div{
+    display: flex;
+    flex-direction: column;
+}
+.error{
+    margin: 0.3rem;
+    margin-bottom: 0.5rem;
+     width: 300px;
+    height: 3vh;
+    color: red;
+    visibility: hidden;
+    
+}
+ button{
     width: 320px;
     margin: 0.3rem;
     margin-top: 1rem;
     padding: 0.5rem;
     text-align: center;
-    font-size: 0.9rem;
+    font-size: 1rem;
+    font-family:  cursive;
+    border: 2px solid #000000;
+    border-radius: 5px;
+}
+button:hover{
+    border: 2px solid blue;
+    color: cornsilk;
+    background: linear-gradient(to bottom right,rgb(30, 30, 238),rgb(18, 156, 236));
 }
 .input_red{
     border: 2px solid red;
