@@ -4,24 +4,41 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Patua+One&display=swap" rel="stylesheet"> 
     <title>Form</title>
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
     <div class="form_container" id="form_container">
-        <h2>Form</h2>
+        <h2>Sign Up</h2>
         <div class="form" id="form">
             <form>
-                <input type="text" onclick="checkName()" id="input" placeholder="Full Name" title="Atleast 10 Character" min="10" required><br><br>
-                <input type="email" onclick="checkEmail()" id="email" placeholder="Email" pattern=".+@.+\..+" title="eg : john@gmail.com" required>
-                <br><br>
-                <input type="password" onclick="checkPassword()" id="password" placeholder="Password" min="10" title="Must be 10 character long  Atleast have 1(A-Z),1(a-z) & 1 special character" required><br><br>
-                <input type="password" onclick="checkConfirmPassword()" id="confirm_password" title="" min="10" placeholder="Confirm Password" required><br><br>
-                <button type="submit" id="submit" disabled>Submit</button>
+                <div class="input_div">
+                    <input type="text" id="input" placeholder="Full Name" title="Atleast 10 Character" min="10" pattern=".+[A-z]" required>
+                    <small id="name_error" class="error"></small>
+                </div>
+                <div class="input_div">
+                    <input type="email"  id="email" placeholder="Email" pattern=".+@.+\..+" title="example@gmail.com" required>
+                    <small id="email_error" class="error"></small>
+                </div>
+                
+                <div class="input_div">
+                    <input type="password" id="password" placeholder="Password" min="10" title="Must be 10 character long  Atleast have 1(A-Z),1(a-z),1(0-9) & 1 special character" required>
+                    <small id="password_error" class="error"></small>
+                </div>
+                
+                <div class="input_div">
+                    <input type="password" id="confirm_password" title="Must be valid as password" min="10" placeholder="Confirm Password" required>
+                    <small id="confirm_password_error" class="error"></small>
+                </div>
+        
+                <button type="submit" id="submit" >Register</button>
             </form>
         </div>
     </div>
 
-    <script src="index.js"></script>
+     <script src="index.js"></script>
 </body>
 </html>
